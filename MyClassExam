@@ -1,0 +1,19 @@
+package Java_Nov;
+
+public class MyClassExam {
+
+	public static void main(String[] args) {
+
+		MyClass myclass = new MyClass();
+		
+		myclass.method1();
+		myclass.method2();
+		int val1 = myclass.method3();
+		myclass.method4(10, 30);
+		int val2 = myclass.method5(10);
+		
+		System.out.println("m3의 값 : "+val1);
+		System.out.println("m5의 값 : "+val2);
+	}
+
+}
