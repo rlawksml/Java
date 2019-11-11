@@ -14,6 +14,13 @@ public class MyClassExam {
 		
 		System.out.println("m3의 값 : "+val1);
 		System.out.println("m5의 값 : "+val2);
+		
+		MyClass2 myclass2 = new MyClass2(10, 4, "펭수");
+		int plusvalue = myclass2.Plus(10, 30);
+		String dancetalk = myclass2.Plus("엣헴 엣헴 ~ ", " 신이나~ 신이나 ~ ");
+		
+		System.out.println(plusvalue);
+		System.out.println(dancetalk);		
 	}
 
 }
