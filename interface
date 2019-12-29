@@ -1,0 +1,64 @@
+package CircleArea;
+
+interface PhoneInterface {
+	int BUTTON = 20;
+	void sendCall();
+	void ReceiveCall();
+}
+
+interface MobilePhoneInterface extends PhoneInterface{
+	void sendSMS();
+	void receiveSMS();
+}
+
+interface MP3Interface{
+	public void play();
+	public void stop();
+}
+
+class PDA {
+	public int calculate(int x, int y) {
+		return x + y;
+	}
+}
+
+class SmartPhone extends PDA implements MobilePhoneInterface, MP3Interface, PhoneInterface {
+	public void sendCall() {
+		System.out.println("CALLING");
+	}
+	public void ReceiveCall() {
+		System.out.println("RECEIVECALL");
+	}
+	public void sendSMS() {
+		System.out.println("SENDMESSAGE");
+	}
+	public void receiveSMS() {
+		System.out.println("RECEIVEMESSAGE");
+	}
+	public void play() {
+		System.out.println("음악 재생");
+	}
+	public void stop() {
+		System.out.println("재생 중지");
+	}
+	
+	public void schedule() {
+		System.out.println("일정 관리");
+	}
+
+}
+
+public class InterFaceEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SmartPhone p = new SmartPhone();
+		p.sendCall();
+		p.play();
+		System.out.println(p.calculate(2, 10));
+		p.schedule();
+		
+
+	}
+
+}
