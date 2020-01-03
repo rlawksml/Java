@@ -1,0 +1,38 @@
+import java.util.*;
+
+
+
+public class TestArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner (System.in);
+		ArrayList<String> grade = new ArrayList<String>();
+		
+		
+		for(int i=0; i<5; i++) {
+			String input =scanner.next();
+			grade.add(input);
+			switch (input) {
+			case "A":
+				System.out.println("4.0");
+				break;
+			case "B":
+				System.out.println("3.0");				
+				break;
+			case "C":
+				System.out.println("2.0");				
+				break;
+			case "D":
+				System.out.println("1.0");				
+				break;
+			case "F":
+				System.out.println("0.0");				
+				break;				
+			}
+		}
+		
+	
+	}
+
+}
