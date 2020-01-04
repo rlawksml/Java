@@ -1,0 +1,46 @@
+import java.util.*;
+
+class StringStack implements StackInterface {
+
+	String a [] = new String[5];
+	int count = 0;
+	
+	public String pop() {
+		return a[--count];
+	}
+
+	public boolean push(String ob) {
+		if(count == 5) {
+			return false;
+		}
+		else {
+			a[count] = ob;
+			count ++;
+			return true;
+		}
+	}
+
+	public int length() {
+		return count + 1;
+	}
+	
+}
+
+
+public class StackManager {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		StringStack a = new StringStack();
+		
+		for(int i =0; i<5; i++) {
+			a.push(scanner.next());
+		}
+		
+		for(int i=0; i<5; i++) {
+			System.out.println(a.pop() + "");
+		}
+		
+		scanner.close();
+	}
+}
