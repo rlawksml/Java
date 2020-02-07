@@ -31,7 +31,12 @@ public class TestArray {
 				break;				
 			}
 		}
-		
+				ArrayList<String> name = new ArrayList<String>();
+		for(int i=0; i<5; i++) {
+
+			name.add(scanner.next());
+			System.out.println(name.get(i));
+		}	
 	
 	}
 
